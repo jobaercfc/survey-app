@@ -1,13 +1,14 @@
-from app.views import ResultViewSet
+from app.views import ResultViewSet, NameMasterViewSet
 from django.urls import path, include
-from rest_framework import renderers
 from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.routers import DefaultRouter
 
 
-get_results = ResultViewSet.as_view({
-    'get': 'get_result',
-})
+router = DefaultRouter()
+router.register(r'results', ResultViewSet)
+router.register(r'namemaster', NameMasterViewSet)
 
-urlpatterns = format_suffix_patterns([
-    path('results/', get_results, name='result-list')
-])
+# The API URLs are now determined automatically by the router.
+urlpatterns = [
+    path('', include(router.urls)),
+]

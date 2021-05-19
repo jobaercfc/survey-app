@@ -12,13 +12,13 @@ class NameMaster(models.Model):
         return self.name
 
 class Result(models.Model):
-    voter_name = models.ForeignKey("NameMaster", on_delete=models.CASCADE)
+    voter_name = models.ForeignKey("NameMaster", on_delete=models.CASCADE, related_name="voter_name")
 
-    first_vote = models.TextField()
+    first_vote = models.ForeignKey("NameMaster", on_delete=models.CASCADE, related_name="first_vote")
 
-    second_vote = models.TextField()
+    second_vote = models.ForeignKey("NameMaster", on_delete=models.CASCADE, related_name="second_vote")
 
-    third_vote = models.TextField()
+    third_vote = models.ForeignKey("NameMaster", on_delete=models.CASCADE, related_name="third_vote")
 
     first_reason = models.TextField()
 
