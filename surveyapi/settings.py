@@ -81,13 +81,13 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'surveyapi',
+        'NAME': 'd8bumi5qafhk0f',
 
-        'USER': 'surveyapi',
+        'USER': 'kigpqdkkglqmta',
 
-        'PASSWORD': 'surveyapi',
+        'PASSWORD': '6f1ddf75391c56d06bbf66a070864493209658556d10e6b20db23130792cb340',
 
-        'HOST': '127.0.0.1',
+        'HOST': 'ec2-35-170-85-206.compute-1.amazonaws.com',
 
         'PORT': '5432',
 
