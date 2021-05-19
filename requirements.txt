@@ -1,2 +1,4 @@
 djangorestframework
 django
+psycopg2-binary
+psycopg2
