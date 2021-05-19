@@ -1,10 +1,2 @@
 djangorestframework
-Django
-Pygments
-Markdown
-coreapi
-psycopg2-binary
-dj-database-url
-gunicorn
-whitenoise
-PyYAML
+django
